@@ -1,0 +1,21 @@
+@use "abstracts" as *;
+
+.home {
+  background: url(../assets/home/background-home-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+
+  @include breakpoint(medium) {
+    background: url(../assets/home/background-home-tablet.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+  }
+  @include breakpoint(large) {
+    background: url(../assets/home/background-home-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}

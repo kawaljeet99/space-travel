@@ -1,0 +1,23 @@
+@use "abstracts" as *;
+
+.button-large {
+  display: inline-grid;
+  place-items: center;
+  width: rem(150);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  color: hsl(var(--clr-dark));
+  background-color: hsl(var(--clr-white));
+  font-size: rem(20);
+  line-height: 1.25px;
+
+  @include breakpoint(medium) {
+    width: rem(242);
+    font-size: rem(32);
+    line-height: 2px;
+  }
+
+  @include breakpoint(large) {
+    width: rem(274);
+  }
+}
