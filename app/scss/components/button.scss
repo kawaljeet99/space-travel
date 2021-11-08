@@ -8,16 +8,37 @@
   border-radius: 50%;
   color: hsl(var(--clr-dark));
   background-color: hsl(var(--clr-white));
+  font-family: var(--ff-bellefair);
   font-size: rem(20);
-  line-height: 1.25px;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
 
   @include breakpoint(medium) {
     width: rem(242);
     font-size: rem(32);
-    line-height: 2px;
+    letter-spacing: 2px;
   }
 
   @include breakpoint(large) {
+    position: relative;
+    z-index: 1;
     width: rem(274);
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+      background-color: hsl(var(--clr-white) / 0.1);
+      opacity: 0;
+      transition: opacity 300ms linear, transform 300ms ease-in-out;
+    }
+
+    &:hover::after {
+      opacity: 1;
+      transform: scale(1.5);
+    }
   }
 }

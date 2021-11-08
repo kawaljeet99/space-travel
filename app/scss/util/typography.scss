@@ -1,38 +1,39 @@
-@use "abstracts" as *;
+// Currently not using these utility classes. Can be used in future
+// @use "abstracts" as *;
 
-.ff-bellefair {
-  font-family: var(--ff-bellefair);
-}
-.ff-condensed {
-  font-family: var(--ff-condensed);
-}
-.ff-barlow {
-  font-family: var(--ff-barlow);
-}
+// .ff-bellefair {
+//   font-family: var(--ff-bellefair);
+// }
+// .ff-condensed {
+//   font-family: var(--ff-condensed);
+// }
+// .ff-barlow {
+//   font-family: var(--ff-barlow);
+// }
 
-.letter-spacing-1 {
-  letter-spacing: rem(4.75);
-}
-.letter-spacing-2 {
-  letter-spacing: rem(2.7);
-}
-.letter-spacing-3 {
-  letter-spacing: rem(2.35);
-}
+// .letter-spacing-1 {
+//   letter-spacing: rem(4.75);
+// }
+// .letter-spacing-2 {
+//   letter-spacing: rem(2.7);
+// }
+// .letter-spacing-3 {
+//   letter-spacing: rem(2.35);
+// }
 
-.uppercase {
-  text-transform: uppercase;
-}
+// .uppercase {
+//   text-transform: uppercase;
+// }
 
-.text-accent {
-  color: hsl(var(--clr-light));
-}
-.text-white {
-  color: hsl(var(--clr-white));
-}
-.text-dark {
-  color: hsl(var(--clr-dark));
-}
+// .text-accent {
+//   color: hsl(var(--clr-light));
+// }
+// .text-white {
+//   color: hsl(var(--clr-white));
+// }
+// .text-dark {
+//   color: hsl(var(--clr-dark));
+// }
 
 // .fs-900 {
 //   font-size: var(--fs-900);
