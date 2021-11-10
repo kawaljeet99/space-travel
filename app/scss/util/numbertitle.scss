@@ -1,0 +1,10 @@
+@use "abstracts" as *;
+
+.numbered-title {
+  text-transform: uppercase;
+  & span {
+    margin-right: 0.5em;
+    font-weight: 700;
+    color: hsl(var(--clr-white) / 0.25);
+  }
+}

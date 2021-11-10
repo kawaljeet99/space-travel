@@ -16,4 +16,17 @@ body {
       background-image: url(../assets/home/background-home-desktop.jpg);
     }
   }
+
+  &.destination {
+    background-image: url(../assets/destination/background-destination-mobile.jpg);
+    background-position: left center;
+
+    @include breakpoint(medium) {
+      background-image: url(../assets/destination/background-destination-tablet.jpg);
+    }
+    @include breakpoint(large) {
+      background-image: url(../assets/destination/background-destination-desktop.jpg);
+      background-position: right center;
+    }
+  }
 }

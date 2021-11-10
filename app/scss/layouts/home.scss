@@ -45,13 +45,10 @@
   }
 
   .description {
-    font-size: var(--fs-300);
-    color: hsl(var(--clr-light));
     margin-top: rem(30);
 
     @include breakpoint(large) {
       max-width: rem(470);
-      font-size: var(--fs-400);
     }
   }
 }
