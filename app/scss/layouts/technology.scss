@@ -1,0 +1,97 @@
+@use "abstracts" as *;
+
+.grid-container {
+  &--technology {
+    --flow-space: 2rem;
+    grid-template-areas:
+      "title"
+      "image"
+      "tabs"
+      "content";
+    padding-inline: 0;
+
+    @include breakpoint(medium) {
+      --flow-space: 3rem;
+      padding: 3rem 0 0;
+      //   max-width: 90%;
+      margin-inline: auto;
+    }
+
+    @include breakpoint(large) {
+      text-align: start;
+      grid-template-areas:
+        ". title title image image"
+        ". tabs content image image"
+        ". tabs content image image";
+      gap: 1rem;
+    }
+
+    .numbered-title {
+      grid-area: title;
+      width: 100%;
+
+      @include breakpoint(medium) {
+        text-align: left;
+        max-width: 90%;
+      }
+    }
+
+    .number-indicators {
+      grid-area: tabs;
+      @include breakpoint(large) {
+        align-self: center;
+        justify-self: start;
+        display: flex;
+        flex-direction: column;
+        margin-right: 1rem;
+      }
+    }
+
+    picture {
+      grid-area: image;
+      margin-inline: auto;
+    }
+
+    .tech-info {
+      grid-area: content;
+
+      @include breakpoint(medium) {
+        margin-top: 3.5rem;
+      }
+
+      @include breakpoint(large) {
+        align-self: center;
+      }
+
+      .title {
+        color: hsl(var(--clr-light));
+        font-size: rem(14);
+        letter-spacing: 2.36px;
+
+        @include breakpoint(medium) {
+          font-size: 1rem;
+          letter-spacing: 2.7px;
+        }
+      }
+
+      .name {
+        margin: 0.5rem 0 1rem;
+
+        @include breakpoint(medium) {
+          margin: 0.8rem 0 1.3rem;
+        }
+      }
+
+      .description {
+        width: 90%;
+        max-width: 450px;
+        margin-inline: auto;
+
+        @include breakpoint(large) {
+          width: unset;
+          margin-inline: unset;
+        }
+      }
+    }
+  }
+}

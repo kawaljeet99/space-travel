@@ -42,4 +42,16 @@ body {
       background-position: right center;
     }
   }
+  &.technology {
+    background-image: url(../assets/technology/background-technology-mobile.jpg);
+    background-position: left center;
+
+    @include breakpoint(medium) {
+      background-image: url(../assets/technology/background-technology-tablet.jpg);
+    }
+    @include breakpoint(large) {
+      background-image: url(../assets/technology/background-technology-desktop.jpg);
+      background-position: right center;
+    }
+  }
 }
