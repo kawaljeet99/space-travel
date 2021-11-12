@@ -1,0 +1,88 @@
+@use "abstracts" as *;
+
+.grid-container {
+  &--crew {
+    --flow-space: 2rem;
+    grid-template-areas:
+      "title"
+      "image"
+      "tabs"
+      "content";
+
+    @include breakpoint(medium) {
+      --flow-space: 3rem;
+      padding: 3rem 1rem 0;
+      max-width: 90%;
+      margin-inline: auto;
+      grid-template-areas:
+        "title"
+        "content"
+        "tabs"
+        "image";
+    }
+
+    @include breakpoint(large) {
+      text-align: start;
+      grid-template-areas:
+        ". title image ."
+        ". content image ."
+        ". tabs image .";
+    }
+    .numbered-title {
+      grid-area: title;
+      width: 100%;
+
+      @include breakpoint(medium) {
+        text-align: left;
+      }
+    }
+
+    .crew-details {
+      grid-area: content;
+
+      @include breakpoint(medium) {
+        margin-top: 3.5rem;
+      }
+
+      @include breakpoint(large) {
+        justify-self: start;
+      }
+
+      .designation {
+        color: hsl(var(--clr-white) / 0.5);
+      }
+
+      .name {
+        margin: 0.5rem 0 1rem;
+        @include breakpoint(medium) {
+          margin: 0.8rem 0 1.3rem;
+        }
+      }
+
+      .description {
+        max-width: 450px;
+      }
+    }
+
+    .dot-indicators {
+      grid-area: tabs;
+      @include breakpoint(large) {
+        justify-self: start;
+      }
+    }
+
+    .img-crew-member {
+      grid-area: image;
+      border-bottom: 1px solid hsl(var(--clr-white) / 0.15);
+      max-width: 90vw;
+
+      img {
+        max-width: 60%;
+        margin-inline: auto;
+        @include breakpoint(large) {
+          max-width: 75%;
+        }
+      }
+    }
+  }
+}
