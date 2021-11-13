@@ -73,6 +73,10 @@ hr {
   border-bottom: 1px solid hsl(var(--clr-white) / 0.2);
 }
 
+[hidden] {
+  display: none !important;
+}
+
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   *,
