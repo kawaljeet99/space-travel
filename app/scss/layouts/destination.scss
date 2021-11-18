@@ -20,6 +20,7 @@
   @include breakpoint(large) {
     max-width: rem(1100);
     text-align: start;
+    margin-top: 2rem;
   }
 
   .numbered-title {
