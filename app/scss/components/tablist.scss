@@ -11,11 +11,15 @@
   }
 
   .tab-item {
-    color: hsl(var(--clr-light));
-    border-bottom: 3px solid transparent;
-    padding: 0 0 0.4em;
+    cursor: pointer;
+    outline: none;
+    border: 0;
     font-size: var(--fs-200);
     letter-spacing: 2.32px;
+    padding: 0 0 0.4em;
+    color: hsl(var(--clr-light));
+    background-color: transparent;
+    border-bottom: 3px solid transparent;
 
     @include breakpoint(medium) {
       font-size: var(--fs-300);
@@ -28,10 +32,5 @@
       color: hsl(var(--clr-white));
       border-bottom: 3px solid inherit;
     }
-  }
-
-  .tab-link {
-    color: inherit;
-    padding: 0 0 0.5em;
   }
 }
