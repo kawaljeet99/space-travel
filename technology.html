@@ -55,7 +55,8 @@
     <div class="grid-container grid-container--technology flow">
         <h1 class="numbered-title h5"><span>03</span>Space launch 101</h1>
 
-        <article class="tech-info">
+        <!-- Launch vehicle -->
+        <article class="tech-info" data-role="launch-vehicle">
             <h2 class="title h4 uppercase">The terminology...</h2>
             <p class="name h3 uppercase">Launch vehicle</p>
             <p class="description">A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a
@@ -64,18 +65,57 @@
                 it's quite an awe-inspiring sight on the launch pad!</p>
         </article>
 
-        <div class="number-indicators flex">
-            <button class="active">1</button>
-            <button>2</button>
-            <button>3</button>
+        <!-- Spaceport -->
+        <article hidden class="tech-info" data-role="spaceport">
+            <h2 class="title h4 uppercase">The terminology...</h2>
+            <p class="name h3 uppercase">Spaceport</p>
+            <p class="description">A spaceport or cosmodrome is a site for launching (or receiving) spacecraft,
+                by analogy to the seaport for ships or airport for aircraft. Based in the
+                famous Cape Canaveral, our spaceport is ideally situated to take advantage
+                of the Earth’s rotation for launch.</p>
+        </article>
+
+        <!-- Space capsule -->
+        <article hidden class="tech-info" data-role="space-capsule">
+            <h2 class="title h4 uppercase">The terminology...</h2>
+            <p class="name h3 uppercase">Space capsule</p>
+            <p class="description">A space capsule is an often-crewed spacecraft that uses a blunt-body reentry
+                capsule to reenter the Earth's atmosphere without wings. Our capsule is where
+                you'll spend your time during the flight. It includes a space gym, cinema,
+                and plenty of other activities to keep you entertained.</p>
+        </article>
+
+        <div class="number-indicators flex" role="tablist">
+            <button class="active" role="tab" data-relate='launch-vehicle'>1</button>
+            <button role="tab" data-relate='spaceport'>2</button>
+            <button role="tab" data-relate='space-capsule'>3</button>
         </div>
 
-        <picture>
+        <!-- image-launch-vehicle -->
+        <picture data-role="launch-vehicle">
             <source media="(min-width: 64em)" srcset="./assets/technology/image-launch-vehicle-portrait.jpg"
                 type="image/jpg">
             <source srcset="./assets/technology/image-launch-vehicle-landscape.jpg" type="image/jpg">
 
             <img src="./assets/technology/image-launch-vehicle-landscape.jpg" alt="Douglas Hurley">
+        </picture>
+
+        <!-- image-spaceport -->
+        <picture hidden data-role="spaceport">
+            <source media="(min-width: 64em)" srcset="./assets/technology/image-spaceport-portrait.jpg"
+                type="image/jpg">
+            <source srcset="./assets/technology/image-spaceport-landscape.jpg" type="image/jpg">
+
+            <img src="./assets/technology/image-spaceport-landscape.jpg" alt="Douglas Hurley">
+        </picture>
+
+        <!-- image-space-capsule -->
+        <picture hidden data-role="space-capsule">
+            <source media="(min-width: 64em)" srcset="./assets/technology/image-space-capsule-portrait.jpg"
+                type="image/jpg">
+            <source srcset="./assets/technology/image-space-capsule-landscape.jpg" type="image/jpg">
+
+            <img src="./assets/technology/image-space-capsule-landscape.jpg" alt="Douglas Hurley">
         </picture>
     </div>
 </body>

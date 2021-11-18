@@ -55,21 +55,40 @@
         <h1 class="numbered-title h5"><span>01</span> Pick your destination</h1>
 
         <div class="container flex">
-            <div class="d-img">
-                <img src="./assets/destination/image-moon.png" alt="">
-            </div>
+            <!-- MOON -->
+            <picture hidden class="d-img " data-role="moon">
+                <source srcset="./assets/destination/image-moon.webp">
+                <img src="./assets/destination/image-moon.png" alt="The moon">
+            </picture>
+
+            <!-- MARS -->
+            <picture hidden class="d-img" data-role="mars">
+                <source srcset="./assets/destination/image-mars.webp">
+                <img src="./assets/destination/image-mars.png" alt="The Mars">
+            </picture>
+
+            <!-- EUROPA -->
+            <picture class="d-img" data-role="europa">
+                <source srcset="./assets/destination/image-europa.webp">
+                <img src="./assets/destination/image-europa.png" alt="The Europa">
+            </picture>
+
+            <!-- TITAN -->
+            <picture hidden class="d-img" data-role="titan">
+                <source srcset="./assets/destination/image-titan.webp">
+                <img src="./assets/destination/image-titan.png" alt="The Titan">
+            </picture>
 
             <div class="d-info-right">
-                <div class="secondary-nav">
-                    <ul class="tab-list flex">
-                        <li class="tab-item active"><a class="tab-link" href="#">Moon</a></li>
-                        <li class="tab-item"><a class="tab-link" href="#">Mars</a></li>
-                        <li class="tab-item"><a class="tab-link" href="#">Europa</a></li>
-                        <li class="tab-item"><a class="tab-link" href="#">Titan</a></li>
-                    </ul>
+                <div class="tab-list flex" role="tablist">
+                    <button class="tab-item active" role="tab" data-relate='moon'>MOON</button>
+                    <button class="tab-item" role="tab" data-relate="mars">MARS</button>
+                    <button class="tab-item" role="tab" data-relate="europa">EUROPA</button>
+                    <button class="tab-item" role="tab" data-relate="titan">TITAN</button>
                 </div>
 
-                <article>
+                <!-- THE MOON -->
+                <article data-role="moon">
                     <h2 class=" planet-title h2 uppercase">Moon</h2>
                     <p class="description">
                         See our planet as you’ve never seen it before. A perfect relaxing trip away to help
@@ -86,6 +105,73 @@
                         <div class="planet-data">
                             <h3 class="data-label">Est. travel time</h3>
                             <p class="data-number">3 days</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- THE MARS -->
+                <article hidden data-role="mars">
+                    <h2 class=" planet-title h2 uppercase">Mars</h2>
+                    <p class="description">
+                        Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons,
+                        the tallest planetary mountain in our solar system. It’s two and a half times
+                        the size of Everest!
+                    </p>
+
+                    <hr>
+                    <div class="data-container flex">
+                        <div class="planet-data">
+                            <h3 class="data-label">Avg. distance</h3>
+                            <p class="data-number">225 mil. km</p>
+                        </div>
+                        <div class="planet-data">
+                            <h3 class="data-label">Est. travel time</h3>
+                            <p class="data-number">9 months/p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- THE EUROPA -->
+                <article hidden data-role="europa">
+                    <h2 class=" planet-title h2 uppercase">Europa</h2>
+                    <p class="description">
+                        The smallest of the four Galilean moons orbiting Jupiter, Europa is a
+                        winter lover’s dream. With an icy surface, it’s perfect for a bit of
+                        ice skating, curling, hockey, or simple relaxation in your snug
+                        wintery cabin.
+                    </p>
+
+                    <hr>
+                    <div class="data-container flex">
+                        <div class="planet-data">
+                            <h3 class="data-label">Avg. distance</h3>
+                            <p class="data-number">628 mil. km</p>
+                        </div>
+                        <div class="planet-data">
+                            <h3 class="data-label">Est. travel time</h3>
+                            <p class="data-number">3 years</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- THE TITAN -->
+                <article hidden data-role="titan">
+                    <h2 class=" planet-title h2 uppercase">Titan</h2>
+                    <p class="description">
+                        The only moon known to have a dense atmosphere other than Earth, Titan
+                        is a home away from home (just a few hundred degrees colder!). As a
+                        bonus, you get striking views of the Rings of Saturn.
+                    </p>
+
+                    <hr>
+                    <div class="data-container flex">
+                        <div class="planet-data">
+                            <h3 class="data-label">Avg. distance</h3>
+                            <p class="data-number">1.6 bil. km</p>
+                        </div>
+                        <div class="planet-data">
+                            <h3 class="data-label">Est. travel time</h3>
+                            <p class="data-number">7 years</p>
                         </div>
                     </div>
                 </article>
