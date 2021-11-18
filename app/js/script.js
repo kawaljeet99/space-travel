@@ -16,7 +16,7 @@ menuClose.addEventListener("click", () => {
   menuClose.style.display = "none";
 });
 
-// ================ TabList on crew page ================== //
+// ================ TabList and the content ================== //
 
 const tablist = document.querySelector("[role='tablist']");
 const tabs = document.querySelectorAll("[role='tab']");
@@ -64,6 +64,24 @@ tabs.forEach((tab) => {
     const currentRole = tab.getAttribute("data-relate");
 
     switch (currentRole) {
+      // Destination
+      case "moon":
+        changeContent(currentRole);
+        break;
+
+      case "mars":
+        changeContent(currentRole);
+        break;
+
+      case "europa":
+        changeContent(currentRole);
+        break;
+
+      case "titan":
+        changeContent(currentRole);
+        break;
+
+      // Crew
       case "commander":
         changeContent(currentRole);
         break;
@@ -77,6 +95,19 @@ tabs.forEach((tab) => {
         break;
 
       case "engineer":
+        changeContent(currentRole);
+        break;
+
+      // Texhnology
+      case "launch-vehicle":
+        changeContent(currentRole);
+        break;
+
+      case "spaceport":
+        changeContent(currentRole);
+        break;
+
+      case "space-capsule":
         changeContent(currentRole);
         break;
     }
